@@ -11,7 +11,6 @@ db.inventory.updateMany(
 );
 
 // remove others elements from array
-
 db.inventory.updateMany(
   {},
   {

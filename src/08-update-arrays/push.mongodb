@@ -1,5 +1,6 @@
 use('platzi_store');
 
+// add one element
 db.inventory.updateOne(
   { _id: 4 },
   {
@@ -9,7 +10,7 @@ db.inventory.updateOne(
   }
 );
 
-// add several elements
+// add several elements using each
 db.inventory.updateOne(
   { _id: 4 },
   {
