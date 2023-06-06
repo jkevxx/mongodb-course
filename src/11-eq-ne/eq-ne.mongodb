@@ -1,0 +1,14 @@
+use('platzi_store');
+
+// using equal implicitly
+// db.inventory.find({qty: 20})
+
+// using equal explicitly
+// db.inventory.find({qty: {$eq: 20}})
+
+// using find in object nested
+//NOTE: whenever there is the notation . (point), the key must be in "" (quotas)
+// db.inventory.find({"item.code": "123"})
+
+// using no equal, used explicitly
+db.inventory.find({ qty: { $ne: 20 } });

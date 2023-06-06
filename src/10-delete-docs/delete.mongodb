@@ -1,0 +1,9 @@
+use('platzi_store');
+
+// db.products.deleteOne({ _id: 1 });
+
+// delete all products with the price 100
+// db.products.deleteMany({ price: 100 });
+
+// delete all the documents
+db.products.drop();
