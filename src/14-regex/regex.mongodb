@@ -1,0 +1,21 @@
+use('platzi_store');
+
+// db.inventory.find({ 'item.description': 'Single line description.' });
+
+// search for a specific word
+// db.inventory.find({ 'item.description': { $regex: /line/ } });
+
+// doesn't matter if it is uppercase or lowercase
+// db.inventory.find({ 'item.description': { $regex: /LINE/i } });
+
+// end up in line
+// db.inventory.find({ 'item.description': { $regex: /line$/i } });
+
+// start with
+// db.inventory.find({ 'item.description': { $regex: /^single/i } });
+
+// bringing all documents without line break (\n)
+// db.inventory.find({ 'item.description': { $regex: /^s/i } });
+
+// multi-line returns the docs that begin with S, ignoring the line breaks.
+db.inventory.find({ 'item.description': { $regex: /^s/im } });
